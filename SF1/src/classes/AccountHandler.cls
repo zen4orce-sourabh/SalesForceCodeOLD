@@ -2,7 +2,7 @@ public with sharing class AccountHandler {
 
 	public static account insertNewAccount(String s)
 	{
-		Account a = new Account();
+		Account a = new Account();    
 		a.Name = s;
 	
 		try{ 
