@@ -1,0 +1,59 @@
+<apex:page controller="GenerateCron" sidebar="false">
+	<apex:form >
+
+		<apex:pageMessages />
+
+		<apex:pageBlock title="Student Registration">
+			<apex:pageBlockSection columns="1">
+
+				<apex:selectList id="sec" styleclass="std" size="1"
+					value="{!selectedClass}" label="Select Class for Scheduled">
+					<apex:selectOptions value="{!schedulabeClass}" />
+				</apex:selectList>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection columns="2">
+
+				<apex:selectList id="sec" styleclass="std" size="1"
+					value="{!selectedSec}" label="SECOND">
+					<apex:selectOptions value="{!Sec}" />
+				</apex:selectList>
+
+				<apex:selectList id="min" styleclass="std" size="1"
+					value="{!selectedMin}" label="MINUTE">
+					<apex:selectOptions value="{!Min}" />
+				</apex:selectList>
+
+				<apex:selectList id="hour" styleclass="std" size="1"
+					value="{!selectedHour}" label="HOUR">
+					<apex:selectOptions value="{!Hour}" />
+				</apex:selectList>
+
+				<apex:selectList styleclass="std" size="1" value="{!SelectedDOM}"
+					label="Day Of Month">
+					<apex:selectOptions value="{!DOM}" />
+				</apex:selectList>
+
+				<apex:selectList id="Month" styleclass="std" size="1"
+					value="{!SelectedMon}" label="Month">
+					<apex:selectOptions value="{!Mon}" />
+				</apex:selectList>
+
+				<apex:selectList id="DOW" styleclass="std" size="1"
+					value="{!SelectedDOW}" label="Day Of Week">
+					<apex:selectOptions value="{!DOW}" />
+				</apex:selectList>
+
+				<apex:selectList id="Year" styleclass="std" size="1"
+					value="{!SelectedYear}" label="Year">
+					<apex:selectOptions value="{!Year}" />
+				</apex:selectList>
+
+
+
+			</apex:pageBlockSection>
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!Preview}" value="Preview" />
+			</apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

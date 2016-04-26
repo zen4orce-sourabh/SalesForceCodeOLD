@@ -1,0 +1,21 @@
+<apex:page standardController="UT_Fund__c" extensions="FundRegistrationController" >
+<apex:form >
+    <apex:pageBlock title="ADD/EDIT UT Fund">
+        <apex:pageBlockSection columns="2"> 
+            <apex:inputField value="{!UT_Fund__c.Name}"/>
+            <apex:inputField value="{!UT_Fund__c.Currency__c}"/>
+            <apex:inputField value="{!UT_Fund__c.Cut_Off_Time__c}"/>
+            <apex:inputField value="{!UT_Fund__c.Front_End_Load__c}"/>
+            <apex:inputField value="{!UT_Fund__c.ISIN__c}"/>     
+            <apex:inputField value="{!UT_Fund__c.Opening_Date__c}"/>
+            <apex:inputField value="{!UT_Fund__c.Closing_Date__c}"/> 
+            <apex:inputField value="{!UT_Fund__c.Value__c}"/> 
+            <apex:inputField value="{!UT_Fund__c.Value_Subscription__c}"/>     
+            <apex:inputField value="{!UT_Fund__c.Management_Fee__c}"/>          
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!save}" value="Save"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock> 
+</apex:form>
+</apex:page>
